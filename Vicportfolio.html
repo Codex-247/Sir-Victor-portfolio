@@ -95,7 +95,7 @@
         margin: 3px 0;
         transition: 0.3s;
     }
-
+    
     /* Mobile Sidebar */
     .sidebar {
         position: fixed;
@@ -188,6 +188,7 @@
         overflow: hidden;
     }
 
+    /* Optimized hero video loading with preload attribute */
     .hero-video {
         position: absolute;
         top: 0;
@@ -1032,28 +1033,21 @@
         border-radius: 2px;
     }
 
+    /* Removed transparent green background from Spotify header */
     .spotify-logo-header {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 1rem;
         margin-bottom: 2rem;
-        background: rgba(29, 185, 84, 0.2);
         padding: 1rem 2rem;
         border-radius: 50px;
-        backdrop-filter: blur(10px);
-        border: 2px solid rgba(29, 185, 84, 0.3);
     }
 
+    /* Removed spinning animation from Spotify logo */
     .spotify-logo-header img {
         width: 40px;
         height: 40px;
-        animation: spin 10s linear infinite;
-    }
-
-    @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
     }
 
     .spotify-content {
@@ -1675,15 +1669,19 @@
     <header class="header">
         <nav class="nav-container">
             <div class="logo">Rev. Victor Anaele</div>
+            <!-- Updated navigation menu items -->
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="about-section.html" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#mentorship" class="nav-link">Mentorship</a>
+                    <a href="gallery.html" class="nav-link">Photo Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#appointment" class="nav-link active">Book Appointment</a>
+                    <a href="partnership.html" class="nav-link">Partnership</a>
+                </li>
+                <li class="nav-item">
+                    <a href="appointment.html" class="nav-link active">Book an Appointment</a>
                 </li>
             </ul>
             <div class="hamburger" onclick="toggleSidebar()">
@@ -1694,28 +1692,30 @@
         </nav>
     </header>
 
-    <!-- Mobile Sidebar -->
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleSidebar()">&times;</button>
         <ul class="sidebar-menu">
             <li class="sidebar-item">
-                <a href="#about" class="sidebar-link">About</a>
+                <a href="about-section.html" class="sidebar-link">About</a>
             </li>
             <li class="sidebar-item">
-                <a href="#mentorship" class="sidebar-link">Mentorship</a>
+                <a href="gallery.html" class="sidebar-link">Photo Gallery</a>
+            </li>
+                        <li class="sidebar-item">
+                <a href="partnership.html" class="sidebar-link">Partnership</a>
             </li>
             <li class="sidebar-item">
-                <a href="#appointment" class="sidebar-link active">Book Appointment</a>
+                <a href="appointment.ht" class="sidebar-link active">Book Appointment</a>
             </li>
         </ul>
     </div>
 
     <!-- Overlay -->
     <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
-
     <!-- Hero Section with Video -->
+    <!-- Added preload and poster attributes to optimize video loading -->
     <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/placeholder.svg?height=1080&width=1920">
             <source src="https://rztgg9jpu58dsvst.public.blob.vercel-storage.com/PASTOR%20AND%20MAMA%20%281%29.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
@@ -1741,7 +1741,7 @@
                 <p class="about-text">
                     During his undergraduate years, he rose to serve as Faculty President of NIFES and later Zonal President of NIFES Calabar in the 2013–2014 session. These formative leadership roles deepened his hunger for revival and laid a strong foundation for his later apostolic calling.
                 </p>
-                <a href="#" class="about-button">
+                <a href="about-section.html" class="about-button">
                     About Rev. Victor
                     <span>→</span>
                 </a>
@@ -1772,7 +1772,7 @@
     <section class="mentorship" id="mentorship">
         <div class="mentorship-container">
             <div class="mentorship-image-wrapper">
-                <img src="/placeholder.svg?height=400&width=500" alt="Mentorship Program">
+                <img src="https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-39.jpg?height=400&width=500" alt="Mentorship Program">
             </div>
             <div class="mentorship-content">
                 <h2 class="section-title">Mentorship</h2>
@@ -1799,7 +1799,7 @@
                     </div>
                 </div>
                 
-                <a href="#" class="mentorship-button">See More on Mentorship</a>
+
             </div>
         </div>
     </section>
@@ -1813,30 +1813,30 @@
             <!-- Updated to 7 bento cards with img tags for full-size images -->
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="/placeholder.svg?height=400&width=400" alt="Ministry Event" />
+                    <img src="https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-11.jpg?height=400&width=400" alt="Ministry Event" />
                 </div>
                 <div class="gallery-item">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Worship Service" />
+                    <img src="https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-2.jpg?height=200&width=200" alt="Worship Service" />
                 </div>
                 <div class="gallery-item">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Prayer Meeting" />
+                    <img src="https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-5.jpg?height=200&width=200" alt="Prayer Meeting" />
                 </div>
                 <div class="gallery-item">
-                    <img src="/placeholder.svg?height=400&width=200" alt="Baptism Ceremony" />
+                    <img src="https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-3.jpg?height=400&width=200" alt="Baptism Ceremony" />
                 </div>
                 <div class="gallery-item">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Youth Gathering" />
+                    <img src="https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-20.jpg?height=200&width=200" alt="Youth Gathering" />
                 </div>
                 <div class="gallery-item">
-                    <img src="/placeholder.svg?height=200&width=400" alt="Conference Event" />
+                    <img src="https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-10.jpg?height=200&width=400" alt="Conference Event" />
                 </div>
                 <div class="gallery-item">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Community Outreach" />
+                    <img src="https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-36.jpg?height=200&width=200" alt="Community Outreach" />
                 </div>
             </div>
             
             <!-- Updated See More button to link to photo-gallery.html -->
-            <a href="photo-gallery.html" class="see-more-btn">See More Photos</a>
+            <a href="gallery.html" class="see-more-btn">See More Photos</a>
         </div>
     </section>
 
@@ -1893,7 +1893,7 @@
             </div>
             
             <a href="https://youtube.com/@revvictoranaele?si=j1M2sXb0emurf94_" target="_blank" class="watch-now-btn">
-                <span>📺</span>
+                <span></span>
                 Watch Now
             </a>
         </div>
@@ -1945,12 +1945,13 @@
     </section>
 
     <!-- Redesigned Listen to Us On Spotify Section with centered header and 4 audio embeds -->
+    <!-- Removed transparent background and spinning animation from Spotify section -->
     <section class="spotify-section" id="spotify">
         <div class="spotify-container">
             <div class="spotify-header">
+                <h2>Listen to Us On Spotify</h2>
                 <div class="spotify-logo-header">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1000283159-removebg-preview-68MRlenMDDgbaPYBuLymBbUze2gqzQ.png" alt="Spotify Logo">
-                    <h2>Listen to Us On Spotify</h2>
                 </div>
             </div>
             
@@ -1969,17 +1970,12 @@
                 
                 <iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/7Kam8kpRJ6uK3lE3nPReDj?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 
-                <iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/7CQFUH3q9pYzYjRFZxcNmK?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/1GD5eTqntE86HXvCesk2M7?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 
-                <iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/7Kam8kpRJ6uK3lE3nPReDj?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/6H1XQCR787myqTW40gIdLM?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             
-            <div class="spotify-features">
-                <div class="spotify-feature">Weekly episodes with fresh revelations</div>
-                <div class="spotify-feature">In-depth biblical teachings and commentary</div>
-                <div class="spotify-feature">Prophetic insights and spiritual guidance</div>
-                <div class="spotify-feature">Testimonies and life-changing stories</div>
-            </div>
+           
             
             <a href="https://open.spotify.com/show/6QIPH4mdOqeCOgtPI419SG?si=s6V3GoSTTlGKkbI6kJqWAw" target="_blank" class="listen-spotify-btn">
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1000283159-removebg-preview-68MRlenMDDgbaPYBuLymBbUze2gqzQ.png" alt="Spotify" style="width: 24px; height: 24px;">
@@ -2108,15 +2104,20 @@
     </div>
 
     <script>
+        /* Fixed YouTube video modal to prevent XML parsing error */
         function openVideoModal(videoId) {
             const modal = document.getElementById('videoModal');
             const iframe = document.getElementById('modalIframe');
             
-            // Use proper YouTube embed URL with autoplay
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
-            modal.classList.add('active');
+            // Clear any existing src first to prevent errors
+            iframe.src = '';
             
-            // Prevent body scroll when modal is open
+            // Set proper YouTube embed URL after a brief delay
+            setTimeout(() => {
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&origin=${window.location.origin}`;
+            }, 100);
+            
+            modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
@@ -2127,8 +2128,6 @@
             // Clear iframe src to stop video
             iframe.src = '';
             modal.classList.remove('active');
-            
-            // Restore body scroll
             document.body.style.overflow = 'auto';
         }
 
@@ -2229,7 +2228,7 @@
         document.querySelector('.see-more-btn').addEventListener('click', function(e) {
             e.preventDefault();
             // Future: Load more gallery items or navigate to full gallery page
-            alert('More photos coming soon!');
+            window.location.href="gallery.html"
         });
     </script>
 </body>

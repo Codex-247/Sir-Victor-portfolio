@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Book an Appointment - Rev. Victor Ifeanyi Anaele</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    .header {
+        background: #000;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .nav-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #4169E1;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    /* Mobile Sidebar */
+    .mobile-sidebar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: #000;
+        z-index: 1001;
+        transition: right 0.3s ease;
+        padding: 2rem;
+    }
+
+    .mobile-sidebar.active {
+        right: 0;
+    }
+
+    .mobile-nav {
+        list-style: none;
+        margin-top: 3rem;
+    }
+
+    .mobile-nav li {
+        margin-bottom: 2.2rem;
+    }
+
+    .mobile-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+        color: #4169E1;
+    }
+
+    .close-sidebar {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+        height: 60vh;
+        background: linear-gradient(135deg, #4169E1 0%, #1e3a8a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 80px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('https://e7guoqvcdebehi5h.public.blob.vercel-storage.com/IMG-39.jpg') center/cover;
+        opacity: 0.25;
+    }
+
+    .hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, rgba(65, 105, 225, 0.8) 0%, rgba(30, 58, 138, 0.9) 100%);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        max-width: 900px;
+        padding: 0 2rem;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        color: #e0e7ff;
+        font-weight: 400;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Appointment Section */
+    .appointment-section {
+        padding: 6rem 2rem;
+        background: #f8fafc;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(17,24,39,0.06);
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+
+    form {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #4169E1;
+    }
+
+    textarea {
+        resize: none;
+        height: 100px;
+    }
+
+    .submit-btn {
+        background: #4169E1;
+        color: #fff;
+        padding: 1rem;
+        border: none;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background: #1e3a8a;
+    }
+
+    /* Footer */
+    .footer {
+        background: #000;
+        color: #fff;
+        padding: 4rem 2rem 2rem;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+        color: #4169E1;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        color: #ccc;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        text-decoration: none;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #333;
+        padding-top: 2rem;
+        text-align: center;
+        color: #666;
+        font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-menu {
+            display: none;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Rev. Victor Anaele</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about-section.html" class="nav-link">About Us</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="partnership.html" class="nav-link">Partnership</a></li>
+                <li><a href="appointment.html" class="nav-link active">Book an Appointment</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar">
+        <button class="close-sidebar">&times;</button>
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-section.html">About</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="partnership.html">Partnership</a></li>
+            <li><a href="appointment.html" class="active">Book an Appointment</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Book an Appointment</h1>
+            <p class="hero-subtitle">Schedule a session with Rev. Victor Ifeanyi Anaele</p>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="container">
+            <h2 class="section-title">Schedule Your Appointment</h2>
+            <p class="section-subtitle">Please fill in the form below, and we’ll get back to you with confirmation.</p>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Book Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Rev. Victor Ifeanyi Anaele</h3>
+                    <p>Apostolic voice emerging in Nigeria, Resident Pastor of Remnant Christian Network (RCN), Uyo.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Ministry</h3>
+                    <p>Remnant Christian Network<br>Uyo, Akwa Ibom State<br>Nigeria</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <p>
+                        <a href="#">YouTube Channel</a><br>
+                        <a href="#">Spotify Podcast</a><br>
+                        <a href="#">Contact Us</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Rev. Victor Ifeanyi Anaele. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    // Mobile Navigation
+    const hamburger = document.querySelector('.hamburger');
+    const sidebar = document.querySelector('.mobile-sidebar');
+    const closeSidebar = document.querySelector('.close-sidebar');
+
+    hamburger.addEventListener('click', () => {
+        sidebar.classList.add('active');
+    });
+
+    closeSidebar.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.classList.remove('active');
+        }
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(0, 0, 0, 0.95)';
+            header.style.backdropFilter = 'blur(10px)';
+        } else {
+            header.style.background = '#000';
+            header.style.backdropFilter = 'none';
+        }
+    });
+
+    // Appointment form submission
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Your appointment request has been submitted successfully!');
+        this.reset();
+    });
+</script>
+</body>
+</html>
