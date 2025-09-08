@@ -39,11 +39,23 @@
         padding: 0 2rem;
     }
 
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo-section img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
     .logo {
         color: #fff;
         font-size: 1.3rem;
         font-weight: 600;
-        text-decoration: none;
     }
 
     .nav-menu {
@@ -690,7 +702,7 @@
     }
 
     /* Footer */
-    .footer {
+        .footer {
         background: #000;
         color: #fff;
         padding: 4rem 2rem 2rem;
@@ -725,6 +737,31 @@
 
     .footer-section a:hover {
         color: #4169E1;
+    }
+
+    .footer-social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .footer-social-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(65, 105, 225, 0.2);
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .footer-social-icons a:hover {
+        background: #4169E1;
+        transform: translateY(-2px);
     }
 
     .footer-bottom {
@@ -882,9 +919,16 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">Rev. Victor Anaele</div>
+            <!-- Added logo section with image and Home navigation -->
+            <div class="logo-section">
+                <img src="rivers-that-make-glad.jpg" alt="Rivers That Make Glad Logo">
+                <div class="logo">Rev. Victor Anaele</div>
+            </div>
             <!-- Updated navigation menu items -->
             <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link">Home</a>
+                </li>
                 <li class="nav-item">
                     <a href="about-section.html" class="nav-link">About Us</a>
                 </li>
@@ -910,22 +954,25 @@
         <button class="close-btn" onclick="toggleSidebar()">&times;</button>
         <ul class="sidebar-menu">
             <li class="sidebar-item">
+                <a href="#hero" class="sidebar-link">Home</a>
+            </li>
+            <li class="sidebar-item">
                 <a href="about-section.html" class="sidebar-link">About</a>
             </li>
             <li class="sidebar-item">
                 <a href="gallery.html" class="sidebar-link">Photo Gallery</a>
             </li>
-                        <li class="sidebar-item">
+            <li class="sidebar-item">
                 <a href="partnership.html" class="sidebar-link">Partnership</a>
             </li>
             <li class="sidebar-item">
-                <a href="appointment.ht" class="sidebar-link active">Book Appointment</a>
+                <a href="appointment.html" class="sidebar-link active">Book Appointment</a>
             </li>
         </ul>
     </div>
+
     <!-- Overlay -->
     <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -1111,8 +1158,8 @@
                 </p>
                 
                 <div class="cta-buttons">
-                    <a href="appointment.html" class="cta-button">
-                         Book an Appointment
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrmh_HfYbWS2YCl5308UqMNwoH-4092U8Jan0Oi8iWXov4sw/viewform" class="cta-button">
+                         Direct Invitation form
                     </a>
                     <a href="partnership.html" class="cta-button secondary">
                         Partnership Opportunities
@@ -1131,29 +1178,38 @@
                     <p>Remnant Christian Network (RCN)<br>
                     Uyo, Akwa Ibom State<br>
                     Nigeria</p>
-                    <p>Email: info@revvictoranaele.com<br>
-                    Phone: +234 xxx xxx xxxx</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Ministry</h3>
-                    <p>Remnant Christian Network</p>
-                    <p>Eastern Watchmen Convergence</p>
-                    <p>The Prophetic Convergence</p>
-                    <p>Remnant Foundation School</p>
+                    <p>Email: revvictoranaele@gmail.com<br>
+                    Phone: +234 80857510</p>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <p><a href="index.html">Home</a></p>
-                    <p><a href="about-section.html">About</a></p>
-                    <p><a href="gallery.html">Photo Gallery</a></p>
-                    <p><a href="partnership.html">Partnership</a></p>
+                <p><a href="index.html">Home</a></p>
+                    <p><a href="about-section.html">About Rev. Victor</a></p>
+                    <p><a href="gallery.html">Photo gallery</a></p>
+                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdrmh_HfYbWS2YCl5308UqMNwoH-4092U8Jan0Oi8iWXov4sw/viewform">Mentorship</a></p>
+                    <p><a href="appointment.html">Book an appointment</a></p>
                 </div>
+                
                 
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <p>Stay connected with our ministry through social media and receive updates on upcoming events and teachings.</p>
+                    <!-- Added social media icons to footer with proper links -->
+                    <div class="footer-social-icons">
+                        <a href="https://web.facebook.com/unclevick22/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/victoranaele" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@revvictoranaele" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://x.com/revvictoranaele" target="_blank" aria-label="X (Twitter)">
+                            <i class="fab fa-x"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             
