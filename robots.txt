@@ -1,0 +1,6 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Disallow:
+
+# Point to sitemap for faster indexing
+Sitemap: https://www.reverendvictoranaele.world/sitemap.xml
