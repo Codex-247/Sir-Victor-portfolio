@@ -4,7 +4,44 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Book an Appointment - Rev. Victor Ifeanyi Anaele</title>
+<meta name="description"
+        content="Rev. Victor Ifeanyi Anaele, Resident Pastor of Remnant Christian Network (RCN) Uyo. Apostolic ministry dedicated to raising altars of righteousness and restoring priesthood across nations. Book appointments for spiritual guidance and mentorship.">
+    <meta name="keywords"
+        content="Rev Victor Anaele, Apostolic Ministry, RCN Uyo, Remnant Christian Network, Christian Pastor, Spiritual Mentorship, Nigeria Pastor, Apostolic Centers, Revival Ministry">
+    <meta name="author" content="Rev. Victor Ifeanyi Anaele">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://victoranaele.com">
+<!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rev. Victor Ifeanyi Anaele - Apostolic Ministry">
+    <meta property="og:description"
+        content="Apostolic ministry dedicated to raising altars of righteousness and restoring priesthood across nations. Spiritual guidance and mentorship available.">
+    <meta property="og:image"
+        content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-27.jpg-u2v7RfmUA5D93P4KGUhYlYpZ97UU7k.jpeg">
+    <meta property="og:url" content="https://victoranaele.com">
+    <meta property="og:site_name" content="Rev. Victor Ifeanyi Anaele Ministry">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Rev. Victor Ifeanyi Anaele - Apostolic Ministry">
+    <meta property="twitter:description"
+        content="Apostolic ministry dedicated to raising altars of righteousness and restoring priesthood across nations.">
+    <meta property="twitter:image"
+        content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-27.jpg-u2v7RfmUA5D93P4KGUhYlYpZ97UU7k.jpeg">
+
+    <!-- Additional SEO -->
+    <meta name="geo.region" content="NG-AK">
+    <meta name="geo.placename" content="Uyo, Akwa Ibom State">
+    <meta name="geo.position" content="5.0360;7.9289">
+    <meta name="ICBM" content="5.0360, 7.9289">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Added Font Awesome for social media icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
     * {
         margin: 0;
@@ -275,6 +312,331 @@
         background: #1e3a8a;
     }
 
+    /* Added Contact Section Styles */
+     .contact {
+        padding: 6rem 2rem;
+        background: #fff;
+    }
+
+    .contact-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 4rem;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .contact-info-box {
+        background: linear-gradient(135deg, #4169E1 0%, #1e3a8a 100%);
+        color: #fff;
+        padding: 3rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contact-info-box h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .contact-info-box p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        color: #e0e0e0;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-item .icon {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        color: #fff;
+        width: 30px;
+        text-align: center;
+    }
+
+    .info-item .text {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #fff;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .social-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .contact-form-wrapper {
+        padding: 3rem;
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .form-group label {
+        color: #555;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.9rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #f8f8f8;
+        color: #333;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #aaa;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #4169E1;
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.2);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .submit-btn {
+        background: #4169E1;
+        color: #fff;
+        padding: 1.1rem 2.5rem;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .submit-btn:hover {
+        background: #1e3a8a;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(65, 105, 225, 0.3);
+    }
+    /* Added Map Section Styles */
+    .map-section {
+        padding: 6rem 2rem;
+        background: #f8fafc;
+    }
+
+    .map-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .map-title {
+        font-size: 2.2rem;
+        color: #333;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .map-subtitle {
+        color: #666;
+        margin-bottom: 3rem;
+        font-size: 1rem;
+    }
+
+    .map-wrapper {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(17,24,39,0.1);
+        height: 400px;
+    }
+
+    .map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Added Modal and Overlay Styles */
+    .hidden {
+        display: none !important;
+    }
+
+    #email-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .loader {
+        width: 50px;
+        height: 50px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #4169E1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    #email-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .modal-content {
+        background: #fff;
+        padding: 3rem;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        background: #10b981;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+    }
+
+    .checkmark {
+        width: 40px;
+        height: 40px;
+        stroke: #fff;
+        stroke-width: 2;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .checkmark-circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    }
+
+    .checkmark-check {
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+    }
+
+    @keyframes stroke {
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    #modal-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    #modal-message {
+        color: #666;
+        margin-bottom: 2rem;
+    }
+
+    #modal-close {
+        background: #4169E1;
+        color: #fff;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+    }
+
+    #modal-close:hover {
+        background: #1e3a8a;
+    }
+
     /* Footer */
     .footer {
         background: #000;
@@ -317,7 +679,7 @@
         font-size: 0.85rem;
     }
 
-    /* Responsive */
+    /* Enhanced Responsive Design */
     @media (max-width: 768px) {
         .hamburger {
             display: flex;
@@ -330,6 +692,47 @@
         .hero-title {
             font-size: 2rem;
         }
+
+        .contact-container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .contact-info-box,
+        .contact-form-wrapper {
+            padding: 2rem;
+        }
+
+        .map-wrapper {
+            height: 300px;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .modal-content {
+            padding: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-title {
+            font-size: 1.8rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .contact-info-box,
+        .contact-form-wrapper {
+            padding: 1.5rem;
+        }
+
+        .nav-container {
+            padding: 0 1rem;
+        }
     }
 </style>
 </head>
@@ -341,7 +744,7 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about-section.html" class="nav-link">About Us</a></li>
-                            <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
                 <li><a href="partnership.html" class="nav-link">Partnership</a></li>
                 <li><a href="appointment.html" class="nav-link active">Book an Appointment</a></li>
             </ul>
@@ -357,7 +760,7 @@
         <ul class="mobile-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about-section.html">About</a></li>
-                        <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
             <li><a href="partnership.html">Partnership</a></li>
             <li><a href="appointment.html" class="active">Book an Appointment</a></li>
         </ul>
@@ -371,40 +774,113 @@
         </div>
     </section>
 
-    <!-- Appointment Section -->
-    <section class="appointment-section">
-        <div class="container">
-            <h2 class="section-title">Schedule Your Appointment</h2>
-            <p class="section-subtitle">Please fill in the form below, and we’ll get back to you with confirmation.</p>
-            <form id="appointmentForm">
-                <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
+   
+
+    <!-- Added Contact Section -->
+   <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info-box">
+                <h2>Get In Touch</h2>
+                <p>We're here to answer any questions you may have about our ministry and how you can connect with us.</p>
+                
+                <div>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <div class="text">
+                          (+234) 809 257 0775 (WhatsApp only)<br><br><br>
+  (+234) 816 957 5110
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">✉️</span>
+                        <div class="text">unclevick22@gmail.com</div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div class="text">
+                            Remnant Christian Network (RCN), Uyo
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+
+                <!-- Replaced text with social media icons and added proper links -->
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/unclevick22/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/victoranaele" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@revvictoranaele" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://x.com/revvictoranaele" target="_blank" aria-label="X (Twitter)">
+                        <i class="fab fa-x"></i>
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">Preferred Time</label>
-                    <input type="time" id="time" name="time" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Additional Message</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Book Appointment</button>
-            </form>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                        <div class="contact-form animate-on-scroll delay-200">
+          <form id="contact-form" method="POST">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="from_name" class="form-input" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="from_email" class="form-input" placeholder="Your email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="How can we help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+            </div>
         </div>
     </section>
+
+
+    <!-- Added Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <h2 class="map-title">Find Us</h2>
+            <p class="map-subtitle">Visit us at Remnant Christian Network (RCN), Uyo</p>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.3!2d7.9!3d5.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMDAnMDAuMCJOIDfCsDU0JzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Remnant Christian Network Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Added Modal and Overlay Elements -->
+    <div id="email-overlay" class="hidden">
+        <div class="loader"></div>
+    </div>
+
+    <div id="email-modal" class="hidden">
+        <div class="modal-content">
+            <div class="icon-circle">
+                <svg class="checkmark" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark-check" d="M14 27l8 8 16-16" fill="none" />
+                </svg>
+            </div>
+            <h2 id="modal-title">Success!</h2>
+            <p id="modal-message">Your message has been sent.</p>
+            <button id="modal-close">Close</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -433,6 +909,8 @@
         </div>
     </footer>
 
+<!-- Added EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     // Mobile Navigation
     const hamburger = document.querySelector('.hamburger');
@@ -470,6 +948,68 @@
         e.preventDefault();
         alert('Your appointment request has been submitted successfully!');
         this.reset();
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const overlay = document.getElementById('email-overlay');
+        const modal   = document.getElementById('email-modal');
+        const title   = document.getElementById('modal-title');
+        const msg     = document.getElementById('modal-message');
+        const closeBtn= document.getElementById('modal-close');
+        const form    = document.getElementById('contact-form');
+
+        // Verify SDK loaded
+        if (typeof emailjs === 'undefined') {
+            console.error('EmailJS SDK failed to load!');
+            return;
+        }
+
+        emailjs.init('jjWq-rln4ny_MZ-dG'); // your Public Key
+
+        // Close modal
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        // On form submit
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            overlay.classList.remove('hidden'); // show spinner
+
+            emailjs.sendForm('service_ylea0bn', 'template_gzwpdtm', form)
+                .then(() => {
+                    overlay.classList.add('hidden');
+                    title.textContent = 'Success!';
+                    msg.textContent   = 'Your message has been sent.';
+                    modal.classList.remove('hidden');
+                    form.reset();
+                })
+                .catch(err => {
+                    overlay.classList.add('hidden');
+                    console.error('EmailJS error:', err);
+                    title.textContent = 'Error';
+                    msg.textContent   = 'Something went wrong. Please try again.';
+                    modal.classList.remove('hidden');
+                });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
     });
 </script>
 </body>
